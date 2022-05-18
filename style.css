@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
+    font-family: 'Comfortaa', cursive;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.score {
+    background-color: #655085;
+    padding: 15px 0px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 15px rgb(71, 70, 70) ;
+    font-weight: bold;
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 15px;
+}
+
+#reset{
+    grid-column: span 2;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+/*#reset:hover{
+    color: #f8a968;
+}*/
+
+.action {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+
+#message {
+    font-size: 20px;
+}
+
+#next {
+    background-color: #655085;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+#next:hover, #reset:hover, .btn-joueur:hover{
+    color: #f8a968;
+}
+
+#next:active{
+    visibility: visible;
+}
+
+#jeu{
+    border-top: 2px solid rgb(65, 65, 65);
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    margin: 5px;
+}
+
+.btn-joueur, .btn-ordi{
+    background-color: #655085;
+    border-radius: 15px;
+}
+
+.button p{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.btn-joueur {
+    cursor: pointer;
+}
+
+/*On indique ensuite les styles qui seront liés au script (lors d'un choix, les autres bouton sont désactivés*/
+.btn-joueur.desactivated {
+    background-color: transparent;
+    cursor: default;
+}
+
+.btn-joueur.active {
+    background-color: #f8a968;
+    cursor: default;
+}
+
+.btn-joueur.desactivated:hover, .btn-joueur.active {
+    color: inherit;
+}
+
+.btn-ordi.active {
+    background-color: #21bed3;
+}
